@@ -170,9 +170,9 @@ def getComputerMove(board, turn, computerLetter):
 	for move in possiveisOpcoesOn:
 
 		movimento(board, computerLetter, move)
-		val = alphabeta(board, computerLetter, playerLetter, -2, 2)		
-		movimento(board, '', move)
+		val = alphabeta(board, computerLetter, playerLetter, -2, 2)	
 
+		movimento(board, '', move)
 		if val > a:
 			a = val
 			opcoes = [move]
@@ -224,7 +224,9 @@ while jogar:
 			else:
 				if tabuleiroCheio(theBoard):
 					tabuleiro(theBoard)
+					print()
 					print('O jogo terminou empatado')
+					print()
 					break
 				else:
 					turn = 'jogador'
